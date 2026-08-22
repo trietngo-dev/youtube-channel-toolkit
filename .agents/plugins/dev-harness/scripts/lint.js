@@ -45,7 +45,7 @@ async function main() {
       }
     }
 
-    const workspaceRoot = (payload.workspacePaths && payload.workspacePaths[0]) || process.cwd();
+    const workspaceRoot = (payload.workspacePaths && payload.workspacePaths[0]) || path.resolve(__dirname, '../../../../');
     const config = loadConfig(workspaceRoot);
 
     // Check if autoLint is enabled

@@ -6,7 +6,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "node .agents/plugins/dev-harness/scripts/security-guard.js",
+            "command": "node scripts/security-guard.js",
             "timeout": 15
           }
         ]
@@ -20,7 +20,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "node .agents/plugins/dev-harness/scripts/lint.js",
+            "command": "node scripts/lint.js",
             "timeout": 20
           }
         ]
@@ -34,7 +34,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "node .agents/plugins/dev-harness/scripts/format.js",
+            "command": "node scripts/format.js",
             "timeout": 20
           }
         ]
@@ -48,7 +48,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "node .agents/plugins/dev-harness/scripts/audit-logger.js",
+            "command": "node scripts/audit-logger.js",
             "timeout": 10
           }
         ]
@@ -57,7 +57,7 @@
     "PostInvocation": [
       {
         "type": "command",
-        "command": "node .agents/plugins/dev-harness/scripts/audit-logger.js",
+        "command": "node scripts/audit-logger.js",
         "timeout": 10
       }
     ]
@@ -66,7 +66,7 @@
     "PostInvocation": [
       {
         "type": "command",
-        "command": "node .agents/plugins/dev-harness/scripts/test-runner.js",
+        "command": "node scripts/test-runner.js",
         "timeout": 60
       }
     ]
@@ -78,7 +78,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "node .agents/plugins/dev-harness/scripts/pre-commit.js",
+            "command": "node scripts/pre-commit.js",
             "timeout": 30
           }
         ]
