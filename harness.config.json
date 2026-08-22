@@ -1,0 +1,35 @@
+{
+  "language": "vi",
+  "agents": {
+    "plan": {
+      "enabled": true
+    },
+    "code": {
+      "enabled": true
+    },
+    "review": {
+      "enabled": true
+    },
+    "test": {
+      "enabled": true
+    },
+    "doc": {
+      "enabled": true
+    },
+    "security": {
+      "enabled": true
+    }
+  },
+  "tools": {
+    "linter": "eslint",
+    "formatter": "prettier",
+    "testRunner": "jest",
+    "packageManager": "npm"
+  },
+  "hooks": {
+    "autoLint": true,
+    "autoFormat": true,
+    "preCommit": true,
+    "autoTest": true
+  }
+}

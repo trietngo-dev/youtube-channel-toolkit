@@ -1,0 +1,37 @@
+{
+  "$schema": "https://raw.githubusercontent.com/electron-userland/electron-builder/master/packages/app-builder-lib/scheme.json",
+  "appId": "com.gemstonefruit.ai",
+  "productName": "Gemstone Fruit AI Studio",
+  "copyright": "Copyright © 2026",
+  "directories": {
+    "output": "dist-electron-build",
+    "buildResources": "build"
+  },
+  "files": [
+    "dist/**/*",
+    "dist-electron/**/*",
+    "public/**/*"
+  ],
+  "win": {
+    "target": [
+      {
+        "target": "nsis",
+        "arch": ["x64"]
+      },
+      {
+        "target": "portable",
+        "arch": ["x64"]
+      }
+    ]
+  },
+  "nsis": {
+    "oneClick": false,
+    "allowToChangeInstallationDirectory": true,
+    "createDesktopShortcut": true,
+    "createStartMenuShortcut": true,
+    "shortcutName": "Gemstone Fruit AI Studio"
+  },
+  "portable": {
+    "artifactName": "GemstoneFruitAIStudio-Portable-${version}.exe"
+  }
+}

@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none">
+  <defs>
+    <linearGradient id="gemGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ff2a6d" />
+      <stop offset="50%" stop-color="#9d4edd" />
+      <stop offset="100%" stop-color="#05d9e8" />
+    </linearGradient>
+  </defs>
+  <polygon points="50,5 85,25 95,65 50,95 5,65 15,25" fill="url(#gemGrad)" stroke="#ffffff" stroke-width="2" />
+  <polyline points="50,5 50,95" stroke="#ffffff" stroke-width="1.5" stroke-opacity="0.6" />
+  <polyline points="15,25 50,45 85,25" stroke="#ffffff" stroke-width="1.5" stroke-opacity="0.6" />
+  <polyline points="5,65 50,75 95,65" stroke="#ffffff" stroke-width="1.5" stroke-opacity="0.6" />
+  <polyline points="50,45 50,75" stroke="#ffffff" stroke-width="1.5" stroke-opacity="0.8" />
+</svg>

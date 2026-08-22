@@ -1,0 +1,89 @@
+{
+  "security-guard": {
+    "PreToolUse": [
+      {
+        "matcher": "run_command|write_to_file|replace_file_content|multi_replace_file_content",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node .agents/plugins/dev-harness/scripts/security-guard.js",
+            "timeout": 15
+          }
+        ]
+      }
+    ]
+  },
+  "auto-lint": {
+    "PostToolUse": [
+      {
+        "matcher": "replace_file_content|write_to_file|multi_replace_file_content",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node .agents/plugins/dev-harness/scripts/lint.js",
+            "timeout": 20
+          }
+        ]
+      }
+    ]
+  },
+  "auto-format": {
+    "PostToolUse": [
+      {
+        "matcher": "replace_file_content|write_to_file|multi_replace_file_content",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node .agents/plugins/dev-harness/scripts/format.js",
+            "timeout": 20
+          }
+        ]
+      }
+    ]
+  },
+  "audit-logger": {
+    "PostToolUse": [
+      {
+        "matcher": "*",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node .agents/plugins/dev-harness/scripts/audit-logger.js",
+            "timeout": 10
+          }
+        ]
+      }
+    ],
+    "PostInvocation": [
+      {
+        "type": "command",
+        "command": "node .agents/plugins/dev-harness/scripts/audit-logger.js",
+        "timeout": 10
+      }
+    ]
+  },
+  "auto-test": {
+    "PostInvocation": [
+      {
+        "type": "command",
+        "command": "node .agents/plugins/dev-harness/scripts/test-runner.js",
+        "timeout": 60
+      }
+    ]
+  },
+  "pre-commit": {
+    "PreToolUse": [
+      {
+        "matcher": "run_command",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node .agents/plugins/dev-harness/scripts/pre-commit.js",
+            "timeout": 30
+          }
+        ]
+      }
+    ]
+  }
+}
+

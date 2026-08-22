@@ -1,0 +1,91 @@
+# ==========================================
+# 1. DEPENDENCIES & PACKAGE MANAGERS
+# ==========================================
+node_modules/
+jspm_packages/
+.npm
+.yarn/cache/
+.yarn/unplugged/
+.pnp
+.pnp.js
+
+# ==========================================
+# 2. BUILDS & ELECTRON OUTPUTS (RẤT NẶNG)
+# ==========================================
+dist/
+dist-electron/
+dist-electron-build/
+build/
+out/
+release/
+*.exe
+*.dmg
+*.AppImage
+*.deb
+*.rpm
+*.zip
+*.tar.gz
+
+# ==========================================
+# 3. ENVIRONMENT & SENSITIVE CREDENTIALS (QUAN TRỌNG)
+# (Tránh lộ Gemini API Key & YouTube OAuth Token)
+# ==========================================
+.env
+.env.*
+!.env.example
+credentials.json
+client_secret*.json
+token.json
+oauth2.keys.json
+*.pem
+*.key
+*.pfx
+
+# ==========================================
+# 4. LOGS & DIAGNOSTICS
+# ==========================================
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+report.[0-9]*.[0-9]*.[0-9]*.[0-9]*.json
+
+# ==========================================
+# 5. CACHE & COMPILERS
+# ==========================================
+.vite/
+.cache/
+.parcel-cache/
+*.tsbuildinfo
+.eslintcache
+.stylelintcache
+
+# ==========================================
+# 6. IDEs & CODE EDITORS
+# ==========================================
+.idea/
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# ==========================================
+# 7. OS GENERATED FILES (Windows / MacOS)
+# ==========================================
+Thumbs.db
+ehthumbs.db
+[Dd]esktop.ini
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
